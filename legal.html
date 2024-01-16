@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url(Mac\ Logo\ Wallpaper\ 4K\ Ideas.jpg);
+      background-size: cover;
+    }
+    .mySlides {
+      display: none;
+      text-align: center;
+    } /* Center the content within the slide */
+    .mySlides img {
+      margin: auto;
+      display: block;
+    } /* Center the image horizontally */
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    .image-container {
+      position: relative;
+    }
+
+    .next-button,
+    .prev-button {
+      position: absolute;
+      bottom: 60px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .next-button {
+      right: 10px;
+      background-color: #ffd700;
+      color: rgba(0, 0, 0, 0.884);
+    }
+
+    .prev-button {
+      left: 10px;
+      background-color: #ffd700;
+      color: rgba(0, 0, 0, 0.884);
+    }
+
+    .next-button:hover,
+    .prev-button:hover {
+      background-color: #e5c100;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading and dropping animation */
+    .fade-drop {
+      animation-name: fadeDrop;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fadeDrop {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="mySlides fade-drop">
+    <div class="image-container">
+      <img src="REAL THRILLER3.jpg" style="width:100%">
+      <a href="first.html"><button class="prev-button" onclick="plusSlides(-1)">Previous</button></a>
+      <a href="genesis.html"><button class="next-button" onclick="plusSlides(1)">Next</button></a>
+    </div>
+  </div>
+</div>
+<br>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    slides[slideIndex-1].classList.add("fade-drop");
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Legal Countdown</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background: url(Mac\ Logo\ Wallpaper\ 4K\ Ideas.jpg);
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+        }
+
+        #countdown-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #countdown {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #banner {
+            display: none;
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+       
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            border-top: 2px solid #003366;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="MOON.png" alt="Legal Logo">
+    </header>
+
+    <div id="countdown-container">
+        <h1 id="countdown"></h1>
+        <div id="banner">
+            <h2>Happy Birthday!</h2>
+            <!-- Add your legal content here -->
+            <p>Wishing you a fantastic celebration and a year filled with success.</p>
+        </div>
+    </div>
+    <div id="confetti-container"></div>
+
+    <footer>
+        <p>&copy; 2022 Legal Countdown. All rights reserved. </p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (replace with your birthday date)
+            var countDownDate = new Date();
+            countDownDate.setSeconds(countDownDate.getSeconds() + 10);
+    
+            // Update the countdown every 1 second
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+    
+                var seconds = Math.floor(distance / 1000);
+    
+                // Display the countdown
+                document.getElementById("countdown").innerHTML = "Time left: " + seconds + "s";
+    
+                // If the countdown is over, show the banner and redirect
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown-container").style.display = "none";
+                    document.getElementById("banner").style.display = "block";
+    
+                    // Redirect to another webpage (replace 'wishestrain.html' with the actual URL)
+                    window.location.href = 'wishestrain.html';
+                }
+            }, 1000);
+        });
+    </script>
+    </body>
+</html>

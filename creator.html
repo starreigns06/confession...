@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Meet The Team</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .contain {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .hi {
+            text-align: center;
+            font-size: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eb6928;
+            margin: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .team-member {
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #f7c0a5;
+            margin-bottom: 15px;
+            object-fit: cover;
+            
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        .icon-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .icon-bar i {
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 20px;
+            color: #333; /* Icon color, you can change it */
+        }
+
+        a {
+            color: black;
+            font-size: 3vw;
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-size: 4vw;
+        }
+        .surprise-message {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .surprise-text {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <audio src="/SIA-Move-Your-Body_(Nobadsong.com).mp3" autoplay loop></audio>
+    <div class="contain">
+        <div class="hi">
+            <h1>Meet The Team</h1>
+        </div>
+        <div class="surprise-message">
+            <h2>Dear Mary Sweetie,</h2>
+            <p class="surprise-text">
+                Wondering how this whole piece was put together? <br>This whole idea came to my head on the 27th of September 2023, which happened to be my birthday. It played like a movie in my head, without hesitation I shared it with my beautiful, intelligent, but sometimes stubborn sister who happens to be a designer, and she got to work immediately. It took a lot of commitment, but it's worth it. This was not made to flatter you or draw your attention but it was made out of the pure light of love. <br> We hope you like it.
+            </p>
+        </div>
+        <div class="gallery">
+            <div class="team-member">
+                <img src="/2024011120025372.jpg" alt="Team Member 1">
+                <p>Patrick C. Emomotimi</p>
+                <p>Author</p>
+                <p>The brain behind the project, A graphics designer and Friend </p>
+                <div class="icon-bar">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="/IMG-20240108-WA0036.jpg" alt="Team Member 2">
+                <p>Yusuf Esther</p>
+                <p>Co - Partner</p>
+                <p>A web developer, A caterer, A ghost fan of the celebrator and perhaps a friend</p>
+                <div class="icon-bar">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+</body>
+</html>
